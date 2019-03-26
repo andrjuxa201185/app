@@ -1,6 +1,17 @@
+const http = require('http');
+const weather = require('yahoo-weather');
 
-<<<<<<< HEAD
-console.log('gesges');
-=======
-console.info('gdg');
->>>>>>> d339de5910ac43934f238546eb917ae4fdc97597
+
+// http.get('http://info.cern.ch', (res) => {
+//    if (res.statusCode !== 200) throw new Error(res.statusMessage);
+//    res.setEncoding('utf-8');
+//    res.on('data', console.log);
+// });
+
+const getWeather = async () => {
+  const result = await weather('kharkiv');
+
+  console.log(result.description);
+}
+
+getWeather();
