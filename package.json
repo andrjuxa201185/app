@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/andrjuxa201185/app#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
     "react": "^16.8.5"
-  }
+  },
+  "devDependencies": {}
 }
