@@ -1,9 +1,9 @@
 const getRandomNum = require('./random');
-// const read = require('./read');
+const httpGet = require('./httpGet');
 
 
 console.log(getRandomNum(44, 50));
 
-// read('name.txt')
-//     .then(text => console.log(text))
-//     .catch(err => console.log(err));
+httpGet('https://jsonplaceholder.typicode.com/posts')
+    .then(response => console.log(response.length)) // --> 100
+    .catch(err => console.log(err));
