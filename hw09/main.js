@@ -1,5 +1,5 @@
 const getRandomNum = require('./random');
-const read = require('./read');
+// const read = require('./read');
 
 
 console.log(getRandomNum(44, 50));
