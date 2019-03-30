@@ -12,8 +12,8 @@ const server = http.createServer((req, res) => {
         throw new Error('Error while reading file: ' + err);
       }
       res.end(data);
-      return;
     });
+    return;
   }
 
   if (regJs.test(req.url)) {
@@ -23,8 +23,8 @@ const server = http.createServer((req, res) => {
         throw new Error('Error while reading file: ' + err);
       }
       res.end(data);
-      return;
     });
+    return;
   }
 
   res.setHeader('Content-Type', 'text/html');
