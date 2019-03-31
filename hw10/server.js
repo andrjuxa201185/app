@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
-  const regImg = /\.jpg$|\.png$|\.jpeg$|\.gif$|\.svg$/;
+  const regImg = /\.(jpg|png|jpeg|gif|svg)$/;
   const regJs = /\.js$/;
 
   if (regImg.test(req.url) || regJs.test(req.url)) {
@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
     const date = new Date();
     const strDate = `${date.getDay()}/${date.getMonth()}/${date.getFullYear()}`;
 
-    res.end(data + `<h1 style="color:green">${strDate}</h1>`);
+    res.end(data.replace(/<\/body>/, `<h1 style="color:green">${strDate}</h1></body>`));
   });
 });
 
